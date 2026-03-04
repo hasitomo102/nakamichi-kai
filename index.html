@@ -34,7 +34,6 @@
             background: repeating-linear-gradient(45deg, #ffd700, #ffd700 20px, #111111 20px, #111111 40px);
         }
         
-        /* 視認性向上のためのテキストシャドウ */
         .text-shadow-strong {
             text-shadow: 2px 2px 4px rgba(0,0,0,0.8), -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
         }
@@ -42,20 +41,16 @@
         .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1); }
         .reveal.active { opacity: 1; transform: translateY(0); }
         
-        /* セクションの重なりを演出 */
-        .overlap-top { margin-top: -80px; position: relative; z-index: 20; }
-        
-        /* スマホでの横揺れ防止 */
         body { overflow-x: hidden; }
     </style>
 </head>
 <body class="text-dark font-sans antialiased bg-gray-100 overflow-x-hidden">
 
-    <div class="bg-danger text-white py-3 px-4 text-center font-black text-sm md:text-base sticky top-0 z-[60] shadow-md tracking-widest text-shadow-strong">
+    <div class="bg-danger text-white py-3 px-4 text-center font-black text-sm md:text-base z-[60] shadow-md tracking-widest text-shadow-strong">
         【警告】2026年3月現在、用地取得が最終段階。重機が入る「いま」が計画を止める最後のチャンスです。
     </div>
 
-    <nav class="bg-dark text-white w-full z-50 border-b-4 border-warning sticky top-[48px] md:top-[52px]">
+    <nav class="bg-dark text-white w-full z-50 border-b-4 border-warning sticky top-0">
         <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
             <div class="font-black text-base md:text-xl tracking-tighter flex items-center gap-2">
                 <i data-lucide="alert-triangle" class="text-warning"></i>
@@ -76,7 +71,7 @@
         
         <div class="relative z-10 max-w-7xl mx-auto px-6 w-full pt-10 pb-20 flex flex-col md:flex-row items-center justify-between gap-12">
             <div class="md:w-2/3">
-                <div class="inline-block bg-warning text-dark font-black px-4 py-1 mb-4 text-xs md:text-xl tracking-widest border-2 border-dark shadow-[4px_4px_0px_#e60000]">
+                <div class="inline-block bg-warning text-dark font-black px-4 py-1 mb-4 text-sm md:text-xl tracking-widest border-2 border-dark shadow-[4px_4px_0px_#e60000]">
                     那珂市（那珂インターチェンジ周辺）巨大事業
                 </div>
                 
@@ -100,7 +95,7 @@
                 </div>
 
                 <div class="mt-10 reveal active" style="transition-delay: 0.4s;">
-                    <a href="#statement" class="w-full md:w-auto bg-danger text-white font-black text-xl px-10 py-5 inline-flex items-center justify-center gap-3 hover:bg-red-700 transition shadow-[8px_8px_0px_#ffd700] border-4 border-white">
+                    <a href="#statement" class="bg-danger text-white font-black text-xl px-10 py-5 inline-flex items-center gap-3 hover:bg-red-700 transition shadow-[8px_8px_0px_#ffd700] border-4 border-white">
                         声明文と「異常な矛盾」を見る <i data-lucide="arrow-down" class="animate-bounce"></i>
                     </a>
                 </div>
@@ -109,8 +104,8 @@
             <div class="md:w-1/3 flex justify-center items-center reveal active" style="transition-delay: 0.5s;">
                 <div class="relative w-64 h-64 md:w-80 md:h-80">
                     <div class="absolute inset-0 bg-warning translate-x-[-10%] translate-y-[-10%] w-[100%] h-[100%]"></div>
-                    <div class="absolute inset-0 bg-danger flex items-center justify-center p-6 shadow-2xl border-4 border-black">
-                        <p class="text-white font-black text-4xl md:text-5xl leading-tight tracking-tighter italic text-center">
+                    <div class="absolute inset-0 bg-danger flex items-center justify-center p-6 shadow-2xl border-4 border-black text-center">
+                        <p class="text-white font-black text-4xl md:text-5xl leading-tight tracking-tighter italic">
                             重機が<br>入る前に。<br>今、声を。
                         </p>
                     </div>
@@ -166,15 +161,6 @@
                     </p>
                 </div>
             </div>
-            
-            <div class="mt-20 pt-10 border-t-4 border-gray-200">
-                <p class="text-xl md:text-3xl font-black mb-4 flex items-center justify-center gap-3 text-dark">
-                    <i data-lucide="bar-chart-2" class="text-warning w-8 h-8 md:w-10 md:h-10"></i>
-                    数字に現れる、計画の異常な矛盾。
-                </p>
-                <p class="text-gray-600 font-bold text-lg md:text-xl">行政の「バラ色の計画」と「厳しい現実」を直視してください。</p>
-                <i data-lucide="chevrons-down" class="text-danger w-10 h-10 mx-auto mt-6 animate-bounce"></i>
-            </div>
         </div>
     </section>
 
@@ -225,11 +211,11 @@
                     <div class="absolute -top-4 -left-4 bg-gray-600 text-white font-black px-4 py-1 text-sm shadow-lg">厳しい現実（実績）</div>
                     <h3 class="text-2xl font-black mb-6 text-gray-300">隣接「常陸大宮市」の道の駅</h3>
                     <div class="space-y-6 mt-auto">
-                        <div class="bg-gray-900 p-4 shadow-inner">
+                        <div class="bg-gray-900 p-4 shadow-inner text-left">
                             <p class="text-sm font-bold text-gray-400 mb-1 italic uppercase tracking-tighter">Annual Visitors</p>
                             <p class="text-3xl font-black">約110万人</p>
                         </div>
-                        <div class="bg-gray-900 p-4 border-l-4 border-gray-500">
+                        <div class="bg-gray-900 p-4 border-l-4 border-gray-500 text-left">
                             <p class="text-sm font-bold text-gray-400 mb-1 italic uppercase tracking-tighter">Annual Profit</p>
                             <p class="text-4xl font-black text-white">約998万円</p>
                         </div>
@@ -240,11 +226,11 @@
                     <div class="absolute -top-4 -right-4 bg-danger text-white font-black px-4 py-1 text-sm shadow-md">那珂市の計画</div>
                     <h3 class="text-2xl font-black mb-6 text-danger italic">那珂市「道の駅」計画試算</h3>
                     <div class="space-y-6 mt-auto">
-                        <div class="bg-gray-100 p-4 shadow-inner">
+                        <div class="bg-gray-100 p-4 shadow-inner text-left">
                             <p class="text-sm font-bold text-gray-600 mb-1 italic uppercase tracking-tighter">Estimated Visitors</p>
                             <p class="text-3xl font-black">約95万人 <span class="text-base text-danger">※隣より少ない</span></p>
                         </div>
-                        <div class="bg-red-50 p-4 border-l-8 border-danger">
+                        <div class="bg-red-50 p-4 border-l-8 border-danger text-left">
                             <p class="text-sm font-bold text-danger mb-1 italic uppercase tracking-tighter">Estimated Profit</p>
                             <p class="text-5xl font-black text-danger">7,000万円！</p>
                         </div>
@@ -267,8 +253,8 @@
             <div class="bg-black text-warning inline-block px-4 py-1 mb-4 font-black text-xl md:text-2xl shadow-xl">
                 私たちの街、私たちの税金。
             </div>
-            <h2 class="text-6xl md:text-[10rem] font-black leading-[0.9] tracking-tighter mb-6 reveal">
-                市民を<br class="md:hidden"><span class="text-warning">舐めるな！</span>
+            <h2 class="text-6xl md:text-[10rem] font-black leading-[1.0] tracking-tighter mb-6 reveal">
+                市民を<br><span class="text-warning">舐めるな！</span>
             </h2>
             <p class="text-xl md:text-4xl font-black bg-white text-danger inline-block px-4 py-2 shadow-[10px_10px_0px_#000]">
                 この不透明な計画を、私たちは黙認しない。
@@ -283,14 +269,14 @@
             <div class="flex flex-col lg:flex-row gap-12 items-center">
                 <div class="lg:w-1/2 reveal">
                     <span class="text-danger font-black tracking-widest text-lg border-b-2 border-danger pb-1">FACT 02</span>
-                    <h2 class="text-4xl md:text-5xl font-black text-dark mt-4 mb-6 leading-tight">
+                    <h2 class="text-4xl md:text-5xl font-black text-dark mt-4 mb-6 leading-tight text-left">
                         「第三セクター方式」の<br>
                         隠された<span class="text-danger underline decoration-dark">ゾンビ経営リスク</span>
                     </h2>
-                    <p class="text-lg font-bold text-gray-700 leading-relaxed mb-6">
+                    <p class="text-lg font-bold text-gray-700 leading-relaxed mb-6 text-left">
                         那珂市は道の駅の経営を、市と民間業者が合同で行う「第三セクター方式」で行うとしています。しかし、全国の道の駅の現状をご存知でしょうか？
                     </p>
-                    <div class="bg-dark text-white p-6 border-l-8 border-danger mb-6 shadow-xl">
+                    <div class="bg-dark text-white p-6 border-l-8 border-danger mb-6 shadow-xl text-left">
                         <h4 class="text-xl font-black mb-2 flex items-center gap-2 text-warning">
                             <i data-lucide="trending-down"></i> 全国の約3割が赤字経営
                         </h4>
@@ -298,7 +284,7 @@
                             「作れば儲かる」時代は終わりました。経営経験に乏しい行政が絡む第三セクターは責任の所在が曖昧になりがちです。
                         </p>
                     </div>
-                    <p class="font-bold text-danger text-lg md:text-2xl">
+                    <p class="font-bold text-danger text-lg md:text-2xl text-left">
                         赤字に陥った場合、その補填に回されるのは間違いなく「市民の税金」です。
                     </p>
                 </div>
@@ -320,9 +306,9 @@
         <div class="absolute top-0 right-0 w-64 h-64 bg-caution opacity-20 transform rotate-45 translate-x-1/2 -translate-y-1/2"></div>
         <div class="max-w-5xl mx-auto px-6 text-center reveal">
             <i data-lucide="megaphone-off" class="w-20 h-20 mx-auto mb-6 text-warning"></i>
-            <h2 class="text-4xl md:text-6xl font-black mb-8 leading-tight text-shadow-strong">
+            <h2 class="text-3xl md:text-6xl font-black mb-8 leading-tight text-shadow-strong">
                 人口53,000人の那珂市。<br>
-                なぜ、市民説明会が<br class="md:hidden"><span class="bg-warning text-dark px-3 py-1">極端に少ない</span>のか？
+                なぜ、市民説明会が<span class="inline-block bg-warning text-dark px-4 py-2 ml-2 shadow-[4px_4px_0px_#000]">極端に少ない</span>のか？
             </h2>
             <div class="bg-white text-dark p-8 md:p-12 text-left border-4 border-dark shadow-[20px_20px_0px_#000] max-w-3xl mx-auto">
                 <p class="text-xl md:text-2xl font-black leading-relaxed mb-6">
@@ -356,31 +342,31 @@
                     市の負担分<span class="text-danger underline decoration-dark decoration-8">「9億6000万円」</span><br>
                     本当の優先順位は何か。
                 </h2>
-                <p class="text-xl font-bold text-gray-600 italic">東京ドーム1個分の観光施設より、市民の命と生活を守る投資を。</p>
+                <p class="text-xl font-bold text-gray-600 italic text-center">東京ドーム1個分の観光施設より、市民の命と生活を守る投資を。</p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-8 reveal">
-                <div class="bg-gray-100 p-8 border-t-8 border-gray-800 shadow-inner">
+                <div class="bg-gray-100 p-8 border-t-8 border-gray-800 shadow-inner text-left">
                     <h3 class="text-2xl font-black text-gray-500 mb-6 flex items-center gap-2 italic">
                         <i data-lucide="x-octagon"></i> 行政が選ぼうとしている道
                     </h3>
                     <div class="text-4xl md:text-5xl font-black text-dark mb-4">9億6,000万円</div>
                     <p class="font-bold text-gray-700 text-lg mb-6 leading-relaxed">を投じて、勝算の薄い「道の駅」を建設。</p>
-                    <div class="bg-white p-5 border-2 border-dashed border-gray-400 font-bold text-sm md:text-base text-danger">
+                    <div class="bg-white p-5 border-2 border-dashed border-gray-400 font-bold text-sm md:text-base text-danger text-left">
                         結果：将来にわたる維持管理費と、赤字補填（ゾンビ経営）のリスクを市民が背負い続ける。
                     </div>
                 </div>
 
-                <div class="bg-warning p-8 border-t-8 border-danger shadow-[15px_15px_0px_#111] transform md:-translate-y-4 relative overflow-hidden">
+                <div class="bg-warning p-8 border-t-8 border-danger shadow-[15px_15px_0px_#111] transform md:-translate-y-4 relative overflow-hidden text-left">
                     <div class="absolute -right-8 -bottom-8 opacity-10">
                         <i data-lucide="heart" class="w-48 h-48 text-danger"></i>
                     </div>
-                    <h3 class="text-2xl font-black text-dark mb-6 flex items-center gap-2 italic">
+                    <h3 class="text-2xl font-black text-dark mb-6 flex items-center gap-2 italic text-left">
                         <i data-lucide="heart-handshake" class="text-danger"></i> 私たちが求める使い道
                     </h3>
                     <div class="text-4xl md:text-5xl font-black text-danger mb-4">9億6,000万円</div>
                     <p class="font-bold text-dark text-lg mb-6 leading-relaxed">を、今すぐ必要な「教育・福祉・インフラ」へ。</p>
-                    <ul class="space-y-4 font-black text-dark bg-white p-6 border-4 border-dark relative z-10 text-base md:text-xl">
+                    <ul class="space-y-4 font-black text-dark bg-white p-6 border-4 border-dark relative z-10 text-base md:text-xl text-left">
                         <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="text-danger w-6 h-6"></i> 老朽化した小中学校のトイレ等改修</li>
                         <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="text-danger w-6 h-6"></i> 給食費の無償化など子育て支援</li>
                         <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="text-danger w-6 h-6"></i> 高齢者の移動を支えるバス等の拡充</li>
@@ -396,7 +382,7 @@
     <section id="action" class="py-24 relative bg-dark text-white">
         <div class="caution-strip h-4 w-full absolute top-0"></div>
         <div class="max-w-4xl mx-auto px-6 text-center reveal">
-            <h2 class="text-4xl md:text-7xl font-black mb-8 tracking-tighter text-warning text-shadow-strong">
+            <h2 class="text-4xl md:text-6xl font-black mb-8 tracking-tighter text-warning text-shadow-strong">
                 この暴走を止めるのは、<br>あなたの声です。
             </h2>
             <p class="text-xl md:text-2xl font-bold mb-12 text-gray-300 leading-relaxed">
@@ -425,7 +411,7 @@
 
     <footer class="bg-black text-white py-16 border-t-8 border-warning">
         <div class="max-w-6xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-12 mb-16">
+            <div class="grid md:grid-cols-2 gap-12 mb-16 text-left">
                 <div>
                     <h2 class="text-2xl font-black mb-6 border-b-2 border-danger pb-2 inline-block italic">那珂市の道の駅建設を考える会</h2>
                     <p class="text-gray-400 font-bold leading-relaxed text-sm md:text-base">
@@ -433,16 +419,16 @@
                     </p>
                 </div>
                 <div>
-                    <h4 class="font-black text-warning mb-4 uppercase tracking-widest border-b border-gray-800 pb-2">Data Source / Evidence</h4>
-                    <ul class="text-xs md:text-sm space-y-3 text-gray-500 font-bold">
-                        <li class="flex gap-2"><span>・</span><span>総事業費・市負担額：那珂市公表資料に基づく</span></li>
-                        <li class="flex gap-2"><span>・</span><span>利用客・利益試算（那珂市/常陸大宮市）：市の試算および実績データに基づく</span></li>
-                        <li class="flex gap-2"><span>・</span><span>敷地面積：約4.3ヘクタール（東京ドーム約1個分）</span></li>
-                        <li class="flex gap-2"><span>・</span><span>全国の道の駅赤字割合に関する一般的な実態調査</span></li>
+                    <h4 class="font-black text-warning mb-4 uppercase tracking-widest border-b border-gray-800 pb-2 text-left">Data Source / Evidence</h4>
+                    <ul class="text-xs md:text-sm space-y-3 text-gray-500 font-bold text-left">
+                        <li class="flex gap-2 text-left"><span>・</span><span>総事業費・市負担額：那珂市公表資料に基づく</span></li>
+                        <li class="flex gap-2 text-left"><span>・</span><span>利用客・利益試算（那珂市/常陸大宮市）：市の試算および実績データに基づく</span></li>
+                        <li class="flex gap-2 text-left"><span>・</span><span>敷地面積：約4.3ヘクタール（東京ドーム約1個分）</span></li>
+                        <li class="flex gap-2 text-left"><span>・</span><span>全国の道の駅赤字割合に関する一般的な実態調査</span></li>
                     </ul>
                 </div>
             </div>
-            <div class="pt-8 border-t border-gray-900 text-center">
+            <div class="pt-8 border-t border-gray-900 text-center text-left">
                 <p class="text-[10px] md:text-xs text-gray-700 font-black tracking-[0.3em] uppercase">
                     &copy; 2026 Citizens Group to Reconsider Naka City Michino-Eki Construction.
                 </p>
@@ -453,7 +439,6 @@
     <script>
         lucide.createIcons();
 
-        // Reveal Animation
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -464,7 +449,6 @@
 
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-        // グラフ
         document.addEventListener('DOMContentLoaded', function() {
             const ctx = document.getElementById('zombieChart').getContext('2d');
             new Chart(ctx, {
