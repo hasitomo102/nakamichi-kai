@@ -38,12 +38,28 @@
         .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1); }
         .reveal.active { opacity: 1; transform: translateY(0); }
         body { overflow-x: hidden; }
+
+        /* ヘッダー斜めカットと危険線の完全同期 */
+        .hero-clip {
+            clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+            padding-bottom: 50px;
+        }
+        .hero-bottom-line {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 45px;
+            background: repeating-linear-gradient(45deg, #ffd700, #ffd700 20px, #111111 20px, #111111 40px);
+            z-index: 30;
+            border-top: 2px solid #000;
+        }
     </style>
 </head>
-<body class="text-dark font-sans antialiased bg-gray-100 overflow-x-hidden">
+<body class="text-dark font-sans antialiased bg-gray-100">
 
     <div class="bg-danger text-white py-3 px-4 text-center font-black text-sm md:text-base z-[60] shadow-md tracking-widest text-shadow-strong">
-        【警告】2026年3月現在、用地取得が最終段階。重機が入る「いま」が計画を止める最後のチャンスです。
+        【警告】重機が入る直前の「いま」が計画を止める最後のチャンスです。
     </div>
 
     <nav class="bg-dark text-white w-full z-50 border-b-4 border-warning sticky top-0">
@@ -58,7 +74,7 @@
         </div>
     </nav>
 
-    <header class="relative min-h-[90vh] flex items-center overflow-hidden bg-dark" style="clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);">
+    <header class="relative min-h-[90vh] flex items-center overflow-hidden bg-dark hero-clip">
         <div class="absolute inset-0">
             <img src="https://images.unsplash.com/photo-1541888941255-631c6b1a412f?auto=format&fit=crop&w=1600&q=80" alt="" class="w-full h-full object-cover grayscale opacity-60">
         </div>
@@ -88,7 +104,7 @@
                 </div>
                 <div class="mt-10 reveal active" style="transition-delay: 0.4s;">
                     <a href="#statement" class="bg-danger text-white font-black text-xl px-10 py-5 inline-flex items-center gap-3 hover:bg-red-700 transition shadow-[8px_8px_0px_#ffd700] border-4 border-white">
-                        「異常な矛盾」を見る <i data-lucide="arrow-down" class="animate-bounce"></i>
+                        声明文と「異常な矛盾」を見る <i data-lucide="arrow-down" class="animate-bounce"></i>
                     </a>
                 </div>
             </div>
@@ -103,7 +119,7 @@
                 </div>
             </div>
         </div>
-<div class="hero-bottom-line"></div>
+        <div class="hero-bottom-line"></div>
     </header>
 
  
